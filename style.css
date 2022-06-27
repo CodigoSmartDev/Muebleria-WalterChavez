@@ -32,13 +32,8 @@
 
 .container-inicio{
     margin: 3rem;
-    background: var(--bs-gray-ligthgit);
+    background: var(--bs-gray-ligth);
 }
-
-/* a {
-    text-decoration: none;
-    color: var(--bs-dark);
-} */
 
 #navbar {
     background: var(--c-coral);
