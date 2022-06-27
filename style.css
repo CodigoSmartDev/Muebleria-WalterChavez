@@ -2,6 +2,7 @@
 
 
 :root {
+    --bs-black: #111111;
     --bs-coral: #f5deb3;
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
@@ -35,19 +36,6 @@
     background: var(--bs-gray-ligth);
 }
 
-#navbar {
-    background: var(--c-coral);
- }
-
-#nombre {
-    margin-left: 1rem;
- }
-
-.contenido {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    color: #5a5a5a;
- }
   
   
   /* CUSTOMIZE THE CAROUSEL
@@ -145,9 +133,9 @@
   .text-center {
     display: flex;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 150px;
     padding-bottom: 40px;
-    background-color: #f5f5f5;
+    background-color: #e0cbcb;
   }
   
   .form-signin {
@@ -190,4 +178,41 @@
       font-size: 3.5rem;
     }
   }
+
+  /* ---- CONTACTO ---- */
+
+  .contacto-container .redes{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.contacto-container .redes li{
+    margin: 5px;
+}
+
+.contacto-container .redes i{
+    color: var(--c-grey);
+    font-size: 20px;
+}
+
+.redes .fa-facebook:hover{
+    color: #3b5998;
+}
+
+.redes .fa-twitter:hover{
+    color: #55acee;
+}
+
+.redes .fa-youtube:hover{
+    color: #bb0000;
+}
+
+.redes .fa-instagram:hover{
+    border-radius: 40px;
+    vertical-align: middle;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
   
