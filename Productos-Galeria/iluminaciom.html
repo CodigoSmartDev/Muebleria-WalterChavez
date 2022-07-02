@@ -1,59 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" href="Imagenes/Logo.jpg">
-    <link rel="stylesheet" type="text/css" href="../../CSS/style.css">
-    <script src="https://kit.fontawesome.com/e88816572a.js" crossorigin="anonymous"></script>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');</style>
-    <title>DESAFIO</title>
-</head>
-<body class="container">
-    <header class="header-galeria">
-        <nav>
-            <ul>
-                <div href="" class="logo">Creative</div>
-                <lI class="atras"><a href="../productos.html"><i class="fas fa-arrow-left"></i></a></li>
-                <li class="li-1"><a href="../../index.html">Inicio</a></li>
-                <lI class="li-2"><a href="../empresa.html">Empresa</a></li>
-                <li class="li-3"><a href="../contacto.html">Contacto</a></li>
-                <li class="li-4"><a href="../productos.html">Productos</a></li>
-                <li class="li-5"><a href="../ingresar.html">Ingresar</a></li>
-            </ul>
-        </nav>
-    </header> 
-    <main>  
-        <div class="container-2">
-            <div class="titulo">
-                <h1>
-                    Iluminacion
-                </h1>
-                <div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam numquam, cupiditate officiis dolorem accusamus deserunt vero aliquam nihil est aspernatur tempore facilis optio vitae ad debitis explicabo id quam doloremque.</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/jpg" href="/Imagenes/Logo/Logo.jpg">
+        <script src="https://kit.fontawesome.com/e88816572a.js" crossorigin="anonymous"></script>
+        <style>@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');</style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+        <title>Creative Muebleria</title>
+    </head>
+    <body class="container-inicio">
+    
+        <div class="container-fluid">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="navbar">
+                <div class="container-fluid">
+                    <img src= "/Imagenes/Logo/Logo.jpg"  alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                  <a class="navbar-brand" id="nombre" href="#">Creative</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
+                        </li>
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/Paginas/empresa.html">Empresa</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/Paginas/contacto.html">Contacto</a>
+                      </li> <li class="nav-item">
+                        <a class="nav-link" href="/Paginas/ingresar.html">Cuenta</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Productos
+                        </a>
+                        <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="nav-link dropdown-item bg-secondary" href="comedor.html">Comedor</a></li>
+                          <li><a class="nav-link dropdown-item bg-secondary" href="living.html">Living</a></li>
+                          <li><a class="nav-link dropdown-item bg-secondary" href="iluminaciom.html">Iluminacion</a></li>
+                          <li><a class="nav-link dropdown-item bg-secondary" href="deco.html">Deco</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+              </nav> 
+
+    <body>
+        
+        <main>
+        
+          <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Iluminacion</h1>
+                <p class="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas odit ullam vero eligendi tempore officia eos voluptates, recusandae adipisci fuga!.</p>
+                <p>
+                  <!-- <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                  <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
+                </p>
+              </div>
             </div>
-            <div class="galeria">
-                <div class="img 1" style="background-image: url('http://picsum.photos/500/545');"></div>
-                <div class="img 2" style="background-image: url('http://picsum.photos/500/550');"></div>
-                <div class="img 3" style="background-image: url('http://picsum.photos/500/535');"></div>
-                <div class="img 4" style="background-image: url('http://picsum.photos/500/530');"></div>
-                <div class="img 5" style="background-image: url('http://picsum.photos/500/525');"></div>
-                <div class="img 6" style="background-image: url('http://picsum.photos/500/520');"></div>
-                <div class="img 7" style="background-image: url('http://picsum.photos/500/515');"></div>
-                <div class="img 8" style="background-image: url('http://picsum.photos/500/510');"></div>
-                <div class="img 9" style="background-image: url('http://picsum.photos/500/505');"></div>
-                <div class="img 10" style="background-image: url('http://picsum.photos/500/500');"></div>
-            </div> 
-        </div>
-    </main>
-    <footer class="footer">
-        <ul>
-            <li class="copyright">2022 Creative</li>
-            <li class="terminos"><a href="/Paginas/terminos.html">Terminos y Condiciones</a></li>
-            <li class="desarrollo">Desarrollado por Código Smarth™</li>
-         </ul>
-</footer>   
+          </section>
+        
+          <div class="album py-5 bg-light">
+            <div class="container">
+        
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" style="background-image: url(http://picsum.photos/500/540);" width="100%" height="225" >
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                          <button type="button" class="btn btn-primary btn-sm btn-outline-ligth">Comprar</button>
+                        </div>
+                        <!-- <small class="text-muted">9 mins</small> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" style="background-image: url(http://picsum.photos/500/545);" width="100%" height="225" >
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                          <button type="button" class="btn btn-primary btn-sm btn-outline-ligth">Comprar</button>
+                        </div>
+                        <!-- <small class="text-muted">9 mins</small> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" style="background-image: url(http://picsum.photos/500/550);" width="100%" height="225" >
+        
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                          <button type="button" class="btn btn-primary btn-sm btn-outline-ligth">Comprar</button>
+                        </div>
+                        <!-- <small class="text-muted">9 mins</small> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" style="background-image: url(http://picsum.photos/500/555);" width="100%" height="225" >
+        
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                          <button type="button" class="btn btn-primary btn-sm btn-outline-ligth">Comprar</button>
+                        </div>
+                        <!-- <small class="text-muted">9 mins</small> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" style="background-image: url(http://picsum.photos/500/560);" width="100%" height="225" >
+        
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                          <button type="button" class="btn btn-primary btn-sm btn-outline-ligth">Comprar</button>
+                        </div>
+                        <!-- <small class="text-muted">9 mins</small> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" style="background-image: url(http://picsum.photos/500/510);" width="100%" height="225" >
+        
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                          <button type="button" class="btn btn-primary btn-sm btn-outline-ligth">Comprar</button>
+                        </div>
+                        <!-- <small class="text-muted">9 mins</small> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="col">
+                    <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" style="background-image: url(http://picsum.photos/500/515);" width="100%" height="225" >
+        
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                          <button type="button" class="btn btn-primary btn-sm btn-outline-ligth">Comprar</button>
+                        </div>
+                        <!-- <small class="text-muted">9 mins</small> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" style="background-image: url(http://picsum.photos/500/520);" width="100%" height="225" >
+        
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                          <button type="button" class="btn btn-primary btn-sm btn-outline-ligth">Comprar</button>
+                        </div>
+                        <!-- <small class="text-muted">9 mins</small> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" style="background-image: url(http://picsum.photos/500/541);" width="100%" height="225" >
+        
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                          <button type="button" class="btn btn-primary btn-sm btn-outline-ligth">Comprar</button>
+                        </div>
+                        <!-- <small class="text-muted">9 mins</small> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        </main>
+
+        <hr class="featurette-divider">
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; 2017–2022 Creative</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Privacidad</a></li>
+              <li class="list-inline-item"><a href="#">Terminos</a></li>
+              <li class="list-inline-item"><a href="#">Soporte</a></li>
+            </ul>
+          </footer> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
     </body>
 </html>
