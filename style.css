@@ -36,14 +36,15 @@
     background: var(--bs-gray-ligth);
 }
 
- /* ---- NAVBAR ---- */
-
- /* @media screen and (max-width:991px) {
-  
-    #img-user{
+@media screen and (max-width: 480px) {
+    #parrafo-idx{
       display: none;
     }
- } */
+
+    #h2-idx{
+      padding: 2rem;
+    }
+}
 
   
   /* CUSTOMIZE THE CAROUSEL
@@ -71,6 +72,26 @@
     min-width: 100%;
     height: 32rem;
  }
+
+  /* --------RESPONSIVE CSS CAROUSEL------*/
+  
+  @media (min-width: 40em) {
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
   
   
   /* MARKETING CONTENT
@@ -91,16 +112,11 @@
     margin-right: .75rem;
     margin-left: .75rem;
  }
-  
-  
-  /* Featurettes
-  ------------------------- */
+
   
 .featurette-divider {
     margin: 5rem 0;
  }
-  
-  /* Thin out the marketing headings */
 
   
 .featurette-heading {
@@ -109,39 +125,23 @@
     letter-spacing: -.05rem;
   }
   
-  
-  /* --------RESPONSIVE CSS CAROUSEL------*/
-  
-  @media (min-width: 40em) {
-    .carousel-caption p {
-      margin-bottom: 1.25rem;
-      font-size: 1.25rem;
-      line-height: 1.4;
-    }
-  
-    .featurette-heading {
-      font-size: 50px;
-    }
-  }
-  
-  @media (min-width: 62em) {
-    .featurette-heading {
-      margin-top: 7rem;
-    }
-  }
+#btn-hov:hover{
+  background: var(--bs-primary);
+}  
+ 
 
   /* ------- INGRESAR ------ */
 
-.text-center{
+.content{
     height: 100%;
   }
   
-  .text-center {
+  .content {
     display: flex;
     align-items: center;
     padding-top: 150px;
     padding-bottom: 40px;
-    background-color: #e0cbcb;
+   
   }
   
   .form-signin {
