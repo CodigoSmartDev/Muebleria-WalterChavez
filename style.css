@@ -296,8 +296,8 @@ ul {
 }
 
 
-@media(min-width: 700px) {
-    body {
+@media(min-width: 800px) {
+    .container-contacto {
       padding: 0 4em;
     }
     .contact-wrapper {
@@ -351,6 +351,7 @@ ul {
   
 /* ---- ALBUM ---- */
 
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -361,5 +362,11 @@ ul {
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .content-galeria{
+    padding-top: 40px;
   }
 }
