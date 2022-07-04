@@ -50,7 +50,6 @@
 
 
 .container-inicio{
-    margin: 3rem;
     background: var(--bs-gray-ligth);
 }
 
@@ -153,6 +152,8 @@
   .content-ingresar {
     background-image: url(/Imagenes/Back/back-cuenta.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     padding-top: 150px;
@@ -193,9 +194,13 @@
 
 .container-contacto {
   background-image: url(/Imagenes/Back/back-contacto.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   line-height: 1.6;
   font-family: 'Quicksand', sans-serif;
   padding: 0 1.5em;
+
 }
 
 .content-contacto {
@@ -349,9 +354,8 @@ ul {
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+  background-size: cover;
+  background-position: center;
 }
 
 @media (min-width: 768px) {
