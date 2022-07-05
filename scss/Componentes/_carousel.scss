@@ -1,0 +1,54 @@
+
+ /* CUSTOMIZE THE CAROUSEL
+  -------------------------------------------------- */
+  
+  /* Carousel base class */
+  .carousel {
+    margin-bottom: 4rem;
+
+    & .carousel-caption {
+        bottom: 3rem;
+        z-index: 10;
+     }
+      
+      /* Declare heights because of positioning of img element */
+    & .carousel-item {
+        height: 32rem;
+    
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            height: 32rem;
+         }
+     }
+
+     /* --------RESPONSIVE CSS CAROUSEL------*/
+
+     @media (min-width: 40em) {
+        .carousel-caption p {
+          margin-bottom: 1.25rem;
+          font-size: 1.25rem;
+          line-height: 1.4;
+        }
+      
+        .featurette-heading {
+          font-size: 50px;
+        }
+      }
+      
+      @media (min-width: 62em) {
+        .featurette-heading {
+          margin-top: 7rem;
+        }
+      }
+ }
+
+
+
+
+
+ 
+  
+ 
