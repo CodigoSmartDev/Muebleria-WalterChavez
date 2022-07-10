@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,300&family=Rubik+Moonrocks&family=Shadows+Into+Light&display=swap");
+/* CUSTOMIZE THE CAROUSEL
+ -------------------------------------------------- */
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+  /* Declare heights because of positioning of img element */
+  /* --------RESPONSIVE CSS CAROUSEL------*/
+}
+.carousel .carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+.carousel .carousel-item {
+  height: 32rem;
+}
+.carousel .carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+@media (min-width: 40em) {
+  .carousel .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  .carousel .featurette-heading {
+    font-size: 50px;
+  }
+}
+@media (min-width: 62em) {
+  .carousel .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+.container-inicio {
+  background: #c8cbce;
+}
+.container-inicio #h2-idx {
+  padding: 3rem;
+}
+@media screen and (max-width: 480px) {
+  .container-inicio #parrafo-idx {
+    display: none;
+  }
+  .container-inicio #h2-idx {
+    padding: 2rem;
+  }
+}
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing .col-lg-4 p {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.05rem;
+}
+
+#btn-hov:hover {
+  background: #084196;
+}
+
+/* ------- INGRESAR ------ */
+.content-ingresar {
+  background-image: url(/Imagenes/Back/back-cuenta.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-top: 150px;
+  padding-bottom: 40px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin input[type=email] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type=password] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+/* ---- CONTACTO ---- */
+.container-contacto {
+  background-image: url(/Imagenes/Back/back-contacto.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  line-height: 1.6;
+  font-family: "Quicksand", sans-serif;
+  padding: 0 1.5em;
+}
+.container-contacto .content-contacto {
+  max-width: 1170px;
+  margin-top: 10em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em;
+}
+.container-contacto .contact-form {
+  background: #222222;
+  opacity: 0.9;
+}
+.container-contacto .contact-form h3 {
+  color: var(--bs-light);
+}
+.container-contacto ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-wrapper {
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+}
+
+.contact-wrapper > * {
+  padding: 1em;
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact-form form label {
+  display: block;
+  color: var(--bs-light);
+}
+.contact-form form p {
+  margin: 0;
+  padding: 1em;
+}
+.contact-form form .block {
+  grid-column: 1/3;
+}
+.contact-form form button, .contact-form form input, .contact-form form textarea {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  outline: 0;
+  color: var(--bs-light);
+  border-bottom: 1px solid var(--bs-primary);
+}
+.contact-form form button {
+  background: #f02038;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em;
+}
+.contact-form form button:hover, .contact-form form button:focus {
+  background: #d63031;
+  color: #fff;
+  transition: background-color 1s ease-out;
+  outline: 0;
+}
+
+/* CONTACT INFO */
+.contact-info {
+  background: #000;
+  opacity: 0.9;
+}
+.contact-info h4, .contact-info ul, .contact-info p {
+  text-align: center;
+  margin: 0 0 1rem 0;
+  color: #3b5998;
+}
+
+@media (min-width: 800px) {
+  .container-contacto {
+    padding: 0 4em;
+  }
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .contact-wrapper > * {
+    padding: 2em;
+  }
+  .contact-info h4,
+.contact-info ul,
+.contact-info p {
+    text-align: left;
+  }
+}
+/* -- ICONOS REDES SOCIALES */
+.redes {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.redes li {
+  margin: 5px;
+}
+.redes li .fab {
+  color: var(--bs-secondary);
+  font-size: 20px;
+}
+.redes li .fa-facebook:hover {
+  color: #3b5998;
+}
+.redes li .fa-twitter:hover {
+  color: #55acee;
+}
+.redes li .fa-youtube:hover {
+  color: #bb0000;
+}
+.redes li .fa-instagram:hover {
+  border-radius: 40px;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}/*# sourceMappingURL=style.css.map */

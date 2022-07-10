@@ -1,7 +1,7 @@
 
 
-@import './fonts';
-@import './variables';
+@import './Base/fonts';
+@import './Base/variables';
 @import './Componentes/carousel';
 
  ul li a{
@@ -9,13 +9,12 @@
  }
 
 
-//  container INDEX
-// Hago uso de las variables a grandes rasgos para que se note la diferencia.
+.container-inicio{
+  background: $secondary;
 
-
- .container-inicio{
-  // hago uso de la variable de color.
-  background: $green;
+  & #h2-idx{
+    padding: 3rem;
+  }
 
   @media screen and (max-width: 480px) {
     #parrafo-idx{
@@ -25,34 +24,28 @@
     #h2-idx{
       padding: 2rem;
     }
-}
+  }
 
 }
 
 
   // marketing INDEX
 
-  .marketing .col-lg-4 {
+.marketing .col-lg-4 {
     margin-bottom: 1.5rem;
     text-align: center;
-
-    & h2 {
-      font-weight: 400;
-      // hago uso de la variable FONT.
-      font-family: $p-font; 
-   }
 
    & p {
     margin-right: .75rem;
     margin-left: .75rem;
- }
- }
+  }
+}
 
     // featurette
   
 .featurette-divider {
     margin: 5rem 0;
- }
+}
 
   
 .featurette-heading {
@@ -62,15 +55,14 @@
   }
   
 #btn-hov:hover{
-  // hago uso de la variable de color.
-  background: $red;
+  background: $primary;
 }  
 
 
  /* ------- INGRESAR ------ */
   
- .content-ingresar {
-  background-image: url(/Imagenes/Back/back-cuenta.jpg);
+.content-ingresar {
+  background-image: url(/Imagenes/Back/back-cuenta.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -112,8 +104,8 @@
  /* ---- CONTACTO ---- */
 
 
- .container-contacto {
-  background-image: url(/Imagenes/Back/back-contacto.jpg);
+.container-contacto {
+  background-image: url(/Imagenes/Back/back-contacto.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -213,31 +205,34 @@
   background: #000;
   opacity: .9;
 
-& h4, & ul, & p {
-  text-align: center;
-  margin: 0 0 1rem 0;
-  color: #3b5998;
+  & h4, & ul, & p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+    color: #3b5998;
 
-}
+  }
 }
 
 
 @media(min-width: 800px) {
-    .container-contacto {
-      padding: 0 4em;
-    }
-    .contact-wrapper {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-    }
-    .contact-wrapper > * {
-      padding: 2em;
-    }
-    .contact-info h4,
-    .contact-info ul,
-    .contact-info p {
-      text-align: left;
-    }
+  .container-contacto {
+    padding: 0 4em;
+  }
+
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .contact-wrapper > * {
+    padding: 2em;
+  }
+
+  .contact-info h4,
+  .contact-info ul,
+  .contact-info p {
+    text-align: left;
+  }
 }
 
     /* -- ICONOS REDES SOCIALES */
