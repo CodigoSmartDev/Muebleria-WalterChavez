@@ -162,7 +162,7 @@
   background: #C9BBCF;
   display: grid;
   grid-template-columns: repeat(3, 33%);
-  grid-template-rows: repeat(5, 25%);
+  grid-template-rows: repeat(6, 25%);
   gap: 3;
 }
 @media screen and (max-width: 480px) {
@@ -229,7 +229,7 @@
 }
 .container-empresa footer {
   grid-column: 1/4;
-  grid-row: 5/6;
+  grid-row: 6/7;
   display: flex;
   text-align: center;
   justify-content: center;
