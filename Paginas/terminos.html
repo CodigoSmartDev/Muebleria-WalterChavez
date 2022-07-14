@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
         <meta name="lenguage" content="Spanish">
         <meta name="generator" content="Creative">
         <meta name="description" content="Diseños en muebles de vanguardia pensados para estilos propios">
-        <meta name="keywards" content="muebles, diseño, moda, decoracion, interior, comedor, living, cocina, Iluminacion, estilo, ">
+        <meta name="keywords" content="muebles, diseño, moda, decoracion, interior, comedor, living, cocina, Iluminacion, estilo, ">
     
           <!-- Open graph -->
         <meta property="og:title" content="Creative Muebleria">
@@ -34,19 +34,50 @@
         <!-- bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     
-        <title>Creative Muebleria</title>
+        <title>Creative Muebles</title>
     </head>
 <body class="terminos-container">
     <header class="header">   
-        <nav>
-            <ul>
-                <div class="logo">Creative</div>
-                <li class="li-1"><a href="../index.html">Inicio</a></li>
-                <lI class="li-2"><a href="empresa.html">Empresa</a></li>
-                <li class="li-3"><a href="contacto.html">Contacto</a></li>
-                <li class="li-4"><a href="ingresar.html">Ingresar</a></li>
-            </ul>
-         </nav>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="navbar">
+            <div class="container-fluid">
+
+              <!-- en este caso hago uso de la varible para el logotipo por si en el futuro se desea cambiar -->
+              <div class="logo"></div>
+
+              <!-- <img class="rounded" src= "Imagenes/Logo/loggo.webp"  alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> -->
+
+              <a class="navbar-brand px-2" id="nombre" href="#">Creative</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
+                      </li>
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/Paginas/empresa.html">Empresa</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="Paginas/contacto.html">Contacto</a>
+                    </li> <li class="nav-item">
+                    <a class="nav-link" href="Paginas/ingresar.html">Cuenta</a>
+                  </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Productos
+                    </a>
+                    <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="nav-link dropdown-item bg-secondary" href="Productos-Galeria/comedor.html">Comedor</a></li>
+                      <li><a class="nav-link dropdown-item bg-secondary" href="Productos-Galeria/living.html">Living</a></li>
+                      <li><a class="nav-link dropdown-item bg-secondary" href="Productos-Galeria/iluminaciom.html">Iluminacion</a></li>
+                      <li><a class="nav-link dropdown-item bg-secondary" href="Productos-Galeria/deco.html">Deco</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
     <main> 
     <section>

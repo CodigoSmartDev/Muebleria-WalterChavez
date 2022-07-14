@@ -11,7 +11,7 @@
     <meta name="lenguage" content="Spanish">
     <meta name="generator" content="Creative">
     <meta name="description" content="Diseños en muebles de vanguardia pensados para estilos propios">
-    <meta name="keywards" content="muebles, diseño, moda, decoracion, interior, comedor, living, cocina, Iluminacion, estilo, ">
+    <meta name="keywords" content="muebles, diseño, moda, decoracion, interior, comedor, living, cocina, Iluminacion, estilo, ">
 
       <!-- Open graph -->
     <meta property="og:title" content="Creative Muebleria">
@@ -34,7 +34,7 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Creative Muebleria</title>
+    <title>Creative Muebles</title>
 </head>
 <body class="container-inicio">
 
@@ -43,7 +43,12 @@
     <div class="container-fluid">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="navbar">
             <div class="container-fluid">
-                <img class="rounded" src= "Imagenes/Logo/loggo.webp"  alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+
+              <!-- en este caso hago uso de la varible para el logotipo por si en el futuro se desea cambiar -->
+              <div class="logo"></div>
+
+              <!-- <img class="rounded" src= "Imagenes/Logo/loggo.webp"  alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> -->
+
               <a class="navbar-brand px-2" id="nombre" href="#">Creative</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -151,23 +156,33 @@
           <div class="row">
             <div class="col-lg-4">
               <img class="bd-placeholder-img rounded-circle" width="180" height="180" src="/Imagenes/comedor/uno-comedor.webp" alt="comedor">
-              <h2>Heading</h2>
+              <h2>Comedor</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quis dolorum.</p>
-              <p><a class="btn btn-secondary" id="btn-hov" href="#">Ver Mas &raquo;</a></p>
+              <button class="boton">
+                 <!-- Uso de variable LINKS -->
+              <a class="link" href="/Productos-Galeria/comedor.html">Ver Mas</a>
+              </button>
+             
             </div> <!-- /.col-lg-4 -->
 
             <div class="col-lg-4">
               <img class="bd-placeholder-img rounded-circle" width="180" height="180" src="/Imagenes/comedor/dos-comedor.webp" alt="living">
-              <h2>Heading</h2>
+              <h2>Living</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, eum.</p>
-              <p><a class="btn btn-secondary" id="btn-hov" href="#">Ver Mas &raquo;</a></p>
+              <button class="boton">
+                <!-- Uso de variable LINKS -->
+              <a class="link" href="/Productos-Galeria/living.html">Ver Mas</a>
+              </button>
             </div> <!-- /.col-lg-4 -->
 
             <div class="col-lg-4">
               <img class="bd-placeholder-img rounded-circle" width="180" height="180" src="/Imagenes/comedor/tres-comedor.webp" alt="living">
-              <h2>Heading</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, fugit.</p>
-              <p><a class="btn btn-secondary" id="btn-hov" href="#">Ver Mas &raquo;</a></p>
+              <h2>Decoracion</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, eum.</p>
+              <button class="boton">
+                 <!-- Uso de variable LINKS -->
+              <a class="link" href="/Productos-Galeria/deco.html">Ver Mas</a>
+              </button>
             </div> <!-- /.col-lg-4 -->
           </section> <!-- /.row -->
 
@@ -221,8 +236,8 @@
         <!-- FOOTER -->
 
           <footer class="container-fluid h-100 w-auto p-5" style="width: 120px; background-color: rgba(0,0,255,.1)">
-          <p class="float-end"><a class="text-decoration-none text-dark" href="#">Volver</a></p>
-          <p>&copy; 2017-2022 Creative, Inc.</p><a class="text-decoration-none" href="#">Privacidad</a><a class="text-decoration-none" href="/Paginas/terminos.html">Terminos</a>
+          <p class="float-end"><a class="link" href="#">Volver</a></p>
+          <p>&copy; 2017-2022 Creative, Inc.</p><a class="link" href="#">Privacidad </a><a class="link" href="/Paginas/terminos.html">Terminos</a>
           </footer>
 
       </main>

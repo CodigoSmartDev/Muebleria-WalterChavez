@@ -1,0 +1,13 @@
+@import 'buttons';
+
+
+.button-danger{
+    @extend .boton;
+    background: red;
+    opacity: .4;
+
+    &:hover{
+        background: red;
+        opacity: .9;
+    }
+}

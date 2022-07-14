@@ -1,0 +1,20 @@
+@import 'variables';
+@import 'mapas';
+
+
+    // Para darle el estilo de color al fondo de los botones usé la llave COLOR PRIMARY del MAPA "Paleta"
+.boton {
+    height: 40px;
+    width: 90px;
+    background: map-get($map: $paleta, $key: primary); //uso de mapa $paleta
+    border: 1px solid map-get($map: $paleta, $key: secondary); //uso de mapa $paleta
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px 8px;
+    box-shadow: 2px 2px 4px 1px rgba($color: #585757, $alpha: 1.0);
+    cursor: pointer;
+
+    &:hover{
+        background-color: map-get($map: $paleta, $key: ok); //uso de mapa $paleta
+    }
+}

@@ -1,0 +1,20 @@
+@mixin flex( $text, $just, $aling) {
+    display: flex;
+    text-align: $text;
+    justify-content: $just;
+    align-items: $aling;
+}
+
+@mixin grid($columnas, $filas, $espacio) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 33%);
+    grid-template-rows: repeat($filas, 25%);
+    gap: $espacio;
+
+    @media screen and ( max-width: 480px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 10rem repeat(6, 20%);
+        gap: 0; 
+    }
+}
+

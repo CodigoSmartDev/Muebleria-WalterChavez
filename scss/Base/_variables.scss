@@ -1,14 +1,43 @@
 
-      $primary: #084196;
-      $secondary: #c8cbce;
+      $primary: #84bdec;
+      $secondary: #7b7f83;
+      $lila: #C9BBCF;
       $cian: #0dcaf0;  
       $green: #198754;
       $yellow: #ffc107;
-      $red:#f50909;
+      $danger:#f50909;
       $light: #fff;
       $dark: #000;
+      $dark-opacity: rgba($dark, .3);
+      
+
+      // -----------------------
 
 
-    //   FONTS
+      //   LINKS
+
+      .link{
+        text-decoration: none;
+        color: $secondary;
+      }
+
+
+      // ------------------
+
+
+      // LOGOTIPO 
+
+    .logo {
+      background-image: url(/Imagenes/Logo/loggo.webp);
+      width: 30px;
+      height: 30px;
+      font-size: 1.125rem;
+      text-anchor: middle;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+    }
+    
+    // ----------------------------
 
     

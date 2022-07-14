@@ -3,14 +3,15 @@
 @import './Base/fonts';
 @import './Base/variables';
 @import './Componentes/carousel';
+@import './Base/mapas';
+@import './Base/buttons';
+@import './Base/mixin';
+@import './Base/extends';
 
- ul li a{
-  text-decoration: none;
- }
 
-
+  // En esta linea hago el uso de
 .container-inicio{
-  background: $secondary;
+  background: map-get($map: $ligth, $key: bg-ligth );
 
   & #h2-idx{
     padding: 3rem;
@@ -31,7 +32,7 @@
 
   // marketing INDEX
 
-.marketing .col-lg-4 {
+.marketing .col-lg-4{
     margin-bottom: 1.5rem;
     text-align: center;
 
@@ -53,10 +54,74 @@
     line-height: 1;
     letter-spacing: -.05rem;
   }
+
+  // -------------------------
+
+  // ---------- EMPRESA --------
+
+
+    // En esta sección hago uso de @mixin ------
+  .container-empresa{
+    background: $lila;
+    @include grid (3, 5, 3);
+
+    & nav{
+      grid-column: 1/4;
+      grid-row: 1/2;
+    }
+
+    & h1{
+      grid-column: 2/3;
+      grid-row: 1/2;
+      @include flex (center, center, center);
+
+      @media screen and ( max-width: 480px) {
+        grid-column: 1/3;
+        @include flex (center, center, center);
+      }
+    }
+    
+    & p{
+      grid-column: 1/4;
+      grid-row: 2/3;
+      @include flex (center, center, flex-end);
+      
+      @media screen and ( max-width: 480px) {
+        grid-colum: 1/3;
+        grid-row: 2/4;
+        padding: 0 2rem;
+        @include flex (center, center, flex-start);
+      }
+    }
+
+    & .targets{
+      grid-column: 1/3;
+      grid-row: 4/5;
+
+      @media screen and ( max-width: 480px) {
+        grid-colum: 1/3;
+        grid-row: 4/6;
+        padding: 0 1rem;
+        @include flex (center, center, flex-start);
+      }
+    }
+
+    & footer{
+      grid-column: 1/4;
+      grid-row: 5/6;
+      @include flex (center, center, flex-end);
+
+      @media screen and ( max-width: 480px) {
+        grid-colum: 1/3;
+        grid-row: 6/7;
+        padding: 0 1rem;
+        @include flex (center, center, flex-end);
+      }
+    }
+  }
+
   
-#btn-hov:hover{
-  background: $primary;
-}  
+  // -------------------
 
 
  /* ------- INGRESAR ------ */
@@ -270,6 +335,28 @@
   }
 }
 
+
+/* ---- GALERIA ---- */
+
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .content-galeria{
+    padding-top: 40px;
+  }
+}
 
 
 
