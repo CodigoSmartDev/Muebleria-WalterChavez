@@ -7,8 +7,8 @@
 
 @mixin grid($columnas, $filas, $espacio) {
     display: grid;
-    grid-template-columns: repeat($columnas, 33%);
-    grid-template-rows: repeat($filas, 25%);
+    grid-template-columns: repeat($columnas, 1fr);
+    grid-template-rows: 3.5rem repeat($filas, 25%);
     gap: $espacio;
 
     @media screen and ( max-width: 480px) {

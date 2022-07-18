@@ -1,58 +1,72 @@
 
 
-@import './Base/fonts';
+
 @import './Base/variables';
 @import './Componentes/carousel';
 @import './Base/mapas';
-@import './Base/buttons';
 @import './Base/mixin';
 @import './Base/extends';
 
 
-  // En esta linea hago el uso de map $Ligth
-.container-inicio{
-  background: map-get($map: $ligth, $key: bg-ligth );
 
-  & #h2-idx{
+.container-inicio{
+  background: #C9CCD3;
+  background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+  background-blend-mode: lighten;
+  animation: fanimado 10s infinite;
+
+  & .h2-idx{
     padding: 3rem;
+    font-size: 52px;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 991px) {
+    .col-sm-6{
+      padding: 2rem;
+    }
+    
+  }
+
+  @media screen and (max-width: 480px){
     #parrafo-idx{
       display: none;
     }
 
-    #h2-idx{
+    .h2-idx{
       padding: 2rem;
+      font-size: 26px;
+    }
+
+    .col-sm-6{
+      padding: 1rem;
     }
   }
-
 }
 
 
   // marketing INDEX
 
-.marketing .col-lg-4{
+.marketing .col-lg-3{
     margin-bottom: 1.5rem;
     text-align: center;
-
-   & p {
-    margin-right: .75rem;
-    margin-left: .75rem;
-  }
 }
 
     // featurette
-  
-.featurette-divider {
-    margin: 5rem 0;
-}
+   
+  .featurette{
+    padding: 4rem ;
 
-  
-.featurette-heading {
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -.05rem;
+    & .featurette-heading {
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -.05rem;
+    }
+  }
+    
+
+  footer a{
+    text-decoration: none;
+    color: #222222;
   }
 
   // -------------------------
@@ -60,63 +74,60 @@
   // ---------- EMPRESA --------
 
 
-    // En esta sección hago uso de @mixin ------
   .container-empresa{
-    background: $lila;
-    @include grid (3, 6, 3);
+    background-image: url(/Imagenes/Empresa/empresa-bg2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+   
 
-    & nav{
-      grid-column: 1/4;
-      grid-row: 1/2;
-    }
+    & .content-empresa{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+     
 
-    & h1{
-      grid-column: 2/3;
-      grid-row: 1/2;
-      @include flex (center, center, center);
-
-      @media screen and ( max-width: 480px) {
-        grid-column: 1/3;
+      & h1{
         @include flex (center, center, center);
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 60px;
+        padding-top: 6rem;
+      }
+
+      & section .h{
+        width: 45rem;
+        height: 50rem;
+        margin-top: 4rem;
+        background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+        opacity: .6;
+        border-radius: 6px;
+        @include flex (center, center, center);
+
+        & p{
+          font-size: 24px;
+          font-family: 'Josefin Sans', sans-serif;
+          padding: 1rem; 
+          
+        }
       }
     }
-    
-    & p{
-      grid-column: 1/4;
-      grid-row: 2/3;
-      @include flex (center, center, flex-end);
+
+    @media screen and ( max-width: 590px) {
       
-      @media screen and ( max-width: 480px) {
-        grid-colum: 1/3;
-        grid-row: 2/4;
-        padding: 0 2rem;
-        @include flex (center, center, flex-start);
+      .content-empresa{
+        width: 95vw;
       }
-    }
-
-    & .targets{
-      grid-column: 1/3;
-      grid-row: 4/5;
-
-      @media screen and ( max-width: 480px) {
-        grid-colum: 1/3;
-        grid-row: 4/6;
-        padding: 0 1rem;
-        @include flex (center, center, flex-start);
+      .content-empresa > h1{
+        font-size: 30px;
       }
-    }
 
-    & footer{
-      grid-column: 1/4;
-      grid-row: 6/7;
-      @include flex (center, center, flex-end);
-
-      @media screen and ( max-width: 480px) {
-        grid-colum: 1/3;
-        grid-row: 6/7;
-        padding: 0 1rem;
-        @include flex (center, center, flex-end);
-      }
+      .content-empresa >p{
+        font-size: 20px;
+        line-height: 30px;
+        padding: 1rem;
+        color: #285AEB;
+      }       
     }
   }
 
@@ -125,7 +136,7 @@
 
 
  /* ------- INGRESAR ------ */
-  
+
 .content-ingresar {
   background-image: url(/Imagenes/Back/back-cuenta.webp);
   background-repeat: no-repeat;
@@ -135,35 +146,39 @@
   align-items: center;
   padding-top: 150px;
   padding-bottom: 40px;
- 
+  
+  & .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+  
+    & input[type="email"] {
+      margin-bottom: -1px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  
+    & input[type="password"] {
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  
+    & .form-floating:focus-within {
+      z-index: 2;
+    }
+  
+    & .checkbox {
+      font-weight: 400;
+    }
+  }  
 }
 
-.form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
-
-  & input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  & input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-
-  & .form-floating:focus-within {
-    z-index: 2;
-  }
-
-  & .checkbox {
-    font-weight: 400;
-  }
+.footer__ingresar{
+  background: $dark-opacity;
 }
+
 
 
  /* ---- CONTACTO ---- */
@@ -269,12 +284,17 @@
 .contact-info {
   background: #000;
   opacity: .9;
+  overflow: hidden;
 
   & h4, & ul, & p {
     text-align: center;
     margin: 0 0 1rem 0;
     color: #3b5998;
 
+  }
+
+  & .map{
+    width: 97%;
   }
 }
 
@@ -296,7 +316,7 @@
   .contact-info h4,
   .contact-info ul,
   .contact-info p {
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -338,17 +358,26 @@
 
 /* ---- GALERIA ---- */
 
-
-.bd-placeholder-img {
+.card{
+  overflow: hidden;
   font-size: 1.125rem;
   text-anchor: middle;
-  background-size: cover;
-  background-position: center;
-}
+ 
+  & .bd-placeholder-img {
+    background-size: cover;
+    background-position: center;
+    transition: .5s;
+    object-fit: cover;
+  
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
 
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
   }
 }
 
@@ -357,6 +386,61 @@
     padding-top: 40px;
   }
 }
+
+.maxim{
+  position: fixed;
+  top: 3.5rem;
+  left: 0;
+  background: rgba(0,0,0,.5);
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+
+  & img{
+    width: 75vw; 
+    max-height: 70vh;
+  }
+
+  & :target{
+    transform: scale(1);
+  }
+
+  & .close{
+    display: block;
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    background: $danger;
+    color: $light;
+    text-decoration: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.5rem;
+  }
+
+  & .next{
+    display: block;
+    background: $primary;
+    color: $light;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    text-decoration: none;
+    margin: 1rem;
+
+  }
+}
+
+
+
+
 
 
 

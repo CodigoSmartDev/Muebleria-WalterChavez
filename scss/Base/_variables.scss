@@ -9,16 +9,22 @@
       $light: #fff;
       $dark: #000;
       $dark-opacity: rgba($dark, .3);
-      
+
 
       // -----------------------
-
+    h2{
+      font-size: 62px;
+    }
 
       //   LINKS
 
       .link{
         text-decoration: none;
-        color: $secondary;
+        color: $light;
+
+        &:hover{
+          color: $light;
+        }
       }
 
 
@@ -40,4 +46,20 @@
     
     // ----------------------------
 
-    
+    // boton -----------------
+
+
+    .btn{
+      background: $primary ;
+      height: 2rem;
+      width: 6rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      padding: 5px 8px;
+      cursor: pointer;
+      transition: .6s;
+      
+      & :hover{
+        transform: scaleX(1px);
+      } 
+    }
