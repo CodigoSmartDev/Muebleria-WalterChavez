@@ -46,20 +46,4 @@
     
     // ----------------------------
 
-    // boton -----------------
-
-
-    .btn{
-      background: $primary ;
-      height: 3;
-      width: 7rem;
-      font-size: 1rem;
-      border-radius: 5px;
-      padding: 5px 8px;
-      cursor: pointer;
-      transition: .6s;
-      
-      & :hover{
-        transform: scaleX(1px);
-      } 
-    }
+   
