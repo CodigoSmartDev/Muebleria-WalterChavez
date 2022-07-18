@@ -23,8 +23,8 @@ h2 {
 
 .btn, .button-danger {
   background: #84bdec;
-  height: 2rem;
-  width: 6rem;
+  height: 3;
+  width: 7rem;
   font-size: 1rem;
   border-radius: 5px;
   padding: 5px 8px;
@@ -98,8 +98,8 @@ h2 {
 
 .btn, .button-danger {
   background: #84bdec;
-  height: 2rem;
-  width: 6rem;
+  height: 3;
+  width: 7rem;
   font-size: 1rem;
   border-radius: 5px;
   padding: 5px 8px;
