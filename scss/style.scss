@@ -8,66 +8,71 @@
 @import './Base/extends';
 
 
-
 .container-inicio{
-  background: #C9CCD3;
-  background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
-  background-blend-mode: lighten;
-  animation: fanimado 10s infinite;
+  background: #000000f1;
+  
 
-  & .h2-idx{
-    padding: 3rem;
-    font-size: 52px;
+  & .content__portada{
+    position: relative;
+    border-radius: 10px;
+
+    & .img__portada__index{
+      opacity: .7;
+    }
+  
+    & .titulo__index__h2{
+      position: absolute;
+      font-family: sans-serif;
+      font-weight: 900;
+      top: 10px;
+      width: 75rem;
+      height: 65rem;
+      font-size: 85px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    & p{
+      position: absolute;
+      font-family: sans-serif;
+      color: $light;
+    }
+
+    @media screen and (max-width: 991px){
+   
+      .titulo__index__h2{
+        font-size: 65px;
+        width: 45rem;
+      } 
+    }
+  
+    @media screen and (max-width: 480px){
+  
+      .titulo__index__h2{
+        padding: 2rem;
+        font-size: 26px;
+      }
+    }
   }
-
-  @media screen and (max-width: 991px) {
-    .col-sm-6{
-      padding: 2rem;
-    }
-    
-  }
-
-  @media screen and (max-width: 480px){
-    #parrafo-idx{
-      display: none;
-    }
-
-    .h2-idx{
-      padding: 2rem;
-      font-size: 26px;
-    }
-
-    .col-sm-6{
-      padding: 1rem;
-    }
-  }
-}
-
-
-  // marketing INDEX
-
-.marketing .col-lg-3{
-    margin-bottom: 1.5rem;
-    text-align: center;
 }
 
     // featurette
    
-  .featurette{
-    padding: 4rem ;
+  // .featurette{
+  //   padding: 4rem ;
 
-    & .featurette-heading {
-      font-weight: 300;
-      line-height: 1;
-      letter-spacing: -.05rem;
-    }
-  }
+  //   & .featurette-heading {
+  //     font-weight: 300;
+  //     line-height: 1;
+  //     letter-spacing: -.05rem;
+  //   }
+  // }
     
 
-  footer a{
-    text-decoration: none;
-    color: #222222;
-  }
+  // footer a{
+  //   text-decoration: none;
+  //   color: #222222;
+  // }
 
   // -------------------------
 
@@ -75,12 +80,7 @@
 
 
   .container-empresa{
-    background-image: url(/Imagenes/Empresa/empresa-bg2.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-   
-   
+    background: #222222;
 
     & .content-empresa{
       display: flex;
@@ -95,20 +95,43 @@
         padding-top: 6rem;
       }
 
-      & section .h{
-        width: 45rem;
-        height: 50rem;
-        margin-top: 4rem;
-        background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-        opacity: .6;
+      .content__parrafo__empresa{
+        display: flex;
+        justify-content: flex-end;
+        background: $mostaza;
+        width: 60rem;
+        height: 55rem;
         border-radius: 6px;
-        @include flex (center, center, center);
 
-        & p{
-          font-size: 24px;
-          font-family: 'Josefin Sans', sans-serif;
-          padding: 1rem; 
-          
+        & .h{
+          width: 45rem;
+          height: 50rem;
+          margin: 4rem;
+          background: $dark;
+          color: $light;
+          border-radius: 6px;
+          @include flex (center, center, center);
+  
+          & span{
+            
+            font-size: 22px;
+            font-family: monospace;
+            white-space: nowrap;
+            border-right: 4px solid;
+            width: 100ch;
+
+            animation: tipado 2s steps(100),
+            blink .5s infinite step-end alternate; 
+            overflow: hidden;
+          }
+
+          @keyframes tipado {
+            from {width: 0 }
+          }
+
+          @keyframes blink {
+            50% {border-color: transparent}
+          }
         }
       }
     }
@@ -207,8 +230,7 @@
   
     & h3{
       color: var(--bs-light);
-    }
-    
+    } 
   }
 
   & ul {
@@ -387,56 +409,7 @@
   }
 }
 
-.maxim{
-  position: fixed;
-  top: 3.5rem;
-  left: 0;
-  background: rgba(0,0,0,.5);
-  width: 100%;
-  height: 100vh;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: scale(0);
 
-  & img{
-    width: 75vw; 
-    max-height: 70vh;
-  }
-
-  & :target{
-    transform: scale(1);
-  }
-
-  & .close{
-    display: block;
-    position: absolute;
-    top: 3rem;
-    right: 2rem;
-    background: $danger;
-    color: $light;
-    text-decoration: none;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 2.5rem;
-  }
-
-  & .next{
-    display: block;
-    background: $primary;
-    color: $light;
-    width: 2rem;
-    height: 2rem;
-    text-align: center;
-    line-height: 2rem;
-    text-decoration: none;
-    margin: 1rem;
-
-  }
-}
 
 
 

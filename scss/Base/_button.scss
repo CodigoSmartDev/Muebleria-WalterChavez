@@ -2,17 +2,16 @@
 @import 'variables';
 
 
- .btn {
-    background: $cian;
+ .boton {
+    position: relative;
+    margin-left: 10%;
+    background: $primary;
     height: 3rem;
-    width: 7rem;
+    width: 15rem;
     font-size: 1rem;
     border-radius: 5px;
+    border: none;
     padding: 5px 8px;
-    // cursor: pointer;
-    transition: .6s;
-    
-    & :hover{
-      transform: scaleX(1px);
-    } 
+    transition: width .6s, border-radius .5s;
+     
   }

@@ -1,13 +1,7 @@
 @import 'variables';
 
+.boton{
+   @extend .boton;
 
-.button-danger{
-    @extend .btn;
-    background: red;
-    opacity: .4;
-
-    &:hover{
-        background: red;
-        opacity: .9;
-    }
+   
 }

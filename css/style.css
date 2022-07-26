@@ -1,7 +1,3 @@
-h2 {
-  font-size: 62px;
-}
-
 .link {
   text-decoration: none;
   color: #fff;
@@ -21,18 +17,36 @@ h2 {
   border-radius: 50%;
 }
 
-.btn, .button-danger {
+.boton {
+  position: relative;
+  margin-left: 10%;
   background: #84bdec;
-  height: 3;
-  width: 7rem;
+  height: 3rem;
+  width: 15rem;
   font-size: 1rem;
   border-radius: 5px;
+  border: none;
   padding: 5px 8px;
-  cursor: pointer;
-  transition: 0.6s;
+  transition: width 0.6s, border-radius 0.5s;
 }
-.btn :hover, .button-danger :hover {
-  transform: scaleX(1px);
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+.link:hover {
+  color: #fff;
+}
+
+.logo {
+  background-image: url(/Imagenes/Logo/loggo.webp);
+  width: 30px;
+  height: 30px;
+  font-size: 1.125rem;
+  text-anchor: middle;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -73,10 +87,6 @@ h2 {
   }
 }
 
-h2 {
-  font-size: 62px;
-}
-
 .link {
   text-decoration: none;
   color: #fff;
@@ -96,81 +106,47 @@ h2 {
   border-radius: 50%;
 }
 
-.btn, .button-danger {
-  background: #84bdec;
-  height: 3;
-  width: 7rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  padding: 5px 8px;
-  cursor: pointer;
-  transition: 0.6s;
-}
-.btn :hover, .button-danger :hover {
-  transform: scaleX(1px);
-}
-
-.button-danger {
-  background: red;
-  opacity: 0.4;
-}
-.button-danger:hover {
-  background: red;
-  opacity: 0.9;
-}
-
 .container-inicio {
-  background: #C9CCD3;
-  background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-blend-mode: lighten;
-  animation: fanimado 10s infinite;
+  background: rgba(0, 0, 0, 0.9450980392);
 }
-.container-inicio .h2-idx {
-  padding: 3rem;
-  font-size: 52px;
+.container-inicio .content__portada {
+  position: relative;
+  border-radius: 10px;
+}
+.container-inicio .content__portada .img__portada__index {
+  opacity: 0.7;
+}
+.container-inicio .content__portada .titulo__index__h2 {
+  position: absolute;
+  font-family: sans-serif;
+  font-weight: 900;
+  top: 10px;
+  width: 75rem;
+  height: 65rem;
+  font-size: 85px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.container-inicio .content__portada p {
+  position: absolute;
+  font-family: sans-serif;
+  color: #fff;
 }
 @media screen and (max-width: 991px) {
-  .container-inicio .col-sm-6 {
-    padding: 2rem;
+  .container-inicio .content__portada .titulo__index__h2 {
+    font-size: 65px;
+    width: 45rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .container-inicio #parrafo-idx {
-    display: none;
-  }
-  .container-inicio .h2-idx {
+  .container-inicio .content__portada .titulo__index__h2 {
     padding: 2rem;
     font-size: 26px;
   }
-  .container-inicio .col-sm-6 {
-    padding: 1rem;
-  }
-}
-
-.marketing .col-lg-3 {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.featurette {
-  padding: 4rem;
-}
-.featurette .featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -0.05rem;
-}
-
-footer a {
-  text-decoration: none;
-  color: #222222;
 }
 
 .container-empresa {
-  background-image: url(/Imagenes/Empresa/empresa-bg2.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: #222222;
 }
 .container-empresa .content-empresa {
   display: flex;
@@ -186,22 +162,44 @@ footer a {
   font-size: 60px;
   padding-top: 6rem;
 }
-.container-empresa .content-empresa section .h {
+.container-empresa .content-empresa .content__parrafo__empresa {
+  display: flex;
+  justify-content: flex-end;
+  background: #998203;
+  width: 60rem;
+  height: 55rem;
+  border-radius: 6px;
+}
+.container-empresa .content-empresa .content__parrafo__empresa .h {
   width: 45rem;
   height: 50rem;
-  margin-top: 4rem;
-  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-  opacity: 0.6;
+  margin: 4rem;
+  background: #000;
+  color: #fff;
   border-radius: 6px;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
-.container-empresa .content-empresa section .h p {
-  font-size: 24px;
-  font-family: "Josefin Sans", sans-serif;
-  padding: 1rem;
+.container-empresa .content-empresa .content__parrafo__empresa .h span {
+  font-size: 22px;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 100ch;
+  animation: tipado 2s steps(100), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+@keyframes tipado {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 @media screen and (max-width: 590px) {
   .container-empresa .content-empresa {
@@ -415,51 +413,6 @@ footer a {
   .content-galeria {
     padding-top: 40px;
   }
-}
-.maxim {
-  position: fixed;
-  top: 3.5rem;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100vh;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: scale(0);
-}
-.maxim img {
-  width: 75vw;
-  max-height: 70vh;
-}
-.maxim :target {
-  transform: scale(1);
-}
-.maxim .close {
-  display: block;
-  position: absolute;
-  top: 3rem;
-  right: 2rem;
-  background: #f50909;
-  color: #fff;
-  text-decoration: none;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 2.5rem;
-}
-.maxim .next {
-  display: block;
-  background: #84bdec;
-  color: #fff;
-  width: 2rem;
-  height: 2rem;
-  text-align: center;
-  line-height: 2rem;
-  text-decoration: none;
-  margin: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
