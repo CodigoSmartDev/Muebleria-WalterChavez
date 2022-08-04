@@ -7,168 +7,410 @@
 @import './Base/mixin';
 @import './Base/extends';
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.container-inicio{
-  background: #000000f1;
-  
+ // ---- navbar ----
 
-  & .content__portada{
-    position: relative;
-    border-radius: 10px;
+ .cover-container {
+  max-width: 70rem;
 
-    & .img__portada__index{
-      opacity: .7;
-    }
-  
-    & .titulo__index__h2{
-      position: absolute;
-      font-family: sans-serif;
-      font-weight: 900;
-      top: 10px;
-      width: 75rem;
-      height: 65rem;
-      font-size: 85px;
-      text-transform: uppercase;
-      text-align: center;
-    }
+& .nav-link {
+    padding: .25rem 0;
+    font-weight: 700;
+    color: rgba(136, 135, 135, 0.973);
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+    margin-left: 1rem;
+    text-shadow: none;
 
-    & p{
-      position: absolute;
-      font-family: sans-serif;
-      color: $light;
+  & .nav-link:hover,
+    .nav-link:focus{
+      border-bottom-color: rgba(255, 255, 255, .25);
+      color: rgba(182, 177, 177, 0.856);
+      font-size: 1.1rem;
     }
 
-    @media screen and (max-width: 991px){
-   
-      .titulo__index__h2{
-        font-size: 65px;
-        width: 45rem;
-      } 
-    }
-  
-    @media screen and (max-width: 480px){
-  
-      .titulo__index__h2{
-        padding: 2rem;
-        font-size: 26px;
-      }
+  & .active {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+}
+}
+
+  // -----------------------
+
+
+.body__index{
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .7);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .7);
+  background-image: url(/Imagenes/Back/imgPortada.webp);
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+
+& .btn-second{
+  color: rgb(116, 113, 113);
+  text-shadow: none;
+
+  & .btn-second:hover,
+    .btn-second:focus{
+      color: rgb(63, 62, 62);
+  }
+}
+
+  & .main__index{
+    font-family: 'Poppins', sans-serif;
+  }
+
+  @media screen and(max-width: 420px) {
+    .main__index{
+      margin-top: 4rem;
     }
   }
 }
 
-    // featurette
    
-  // .featurette{
-  //   padding: 4rem ;
-
-  //   & .featurette-heading {
-  //     font-weight: 300;
-  //     line-height: 1;
-  //     letter-spacing: -.05rem;
-  //   }
-  // }
     
+  // ---------- HTML Empresa --------
 
-  // footer a{
-  //   text-decoration: none;
-  //   color: #222222;
-  // }
+.container-empresa{
+  font-family: 'open sans';
+  font-size: 16px;
+  background-color: $bg-empresa;
 
-  // -------------------------
+  & h1, h2, h3{
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .7);
+  }
 
-  // ---------- EMPRESA --------
+ & .header-empresa {
+  width: 100%;
+  height: 650px;
+  background-image: url(/Imagenes/Empresa/empresa-bg2.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
 
+  & .textos {
+    margin-top: -490px;
 
-  .container-empresa{
-    background: #222222;
-
-    & .content-empresa{
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-     
-
-      & h1{
-        @include flex (center, center, center);
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 60px;
-        padding-top: 6rem;
-      }
-
-      .content__parrafo__empresa{
-        display: flex;
-        justify-content: flex-end;
-        background: $mostaza;
-        width: 60rem;
-        height: 55rem;
-        border-radius: 6px;
-
-        & .h{
-          width: 45rem;
-          height: 50rem;
-          margin: 4rem;
-          background: $dark;
-          color: $light;
-          border-radius: 6px;
-          @include flex (center, center, center);
+  & .titulo {
+    font-size: 85px;
+  }
   
-          & span{
-            
-            font-size: 22px;
-            font-family: monospace;
-            white-space: nowrap;
-            border-right: 4px solid;
-            width: 100ch;
+  & .subtitulo {
+      font-size: 42px;
+      font-weight: 300;
+      margin-bottom: 32px;
+    }  
+  }
 
-            animation: tipado 2s steps(100),
-            blink .5s infinite step-end alternate; 
-            overflow: hidden;
-          }
+  & .boton {
+    display: inline-block;
+    padding: 6px;
+    width: 128px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+  }
+ }
+  
+  & .sesgoabajo {
+      z-index: 10;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-width: 0 0 35vh 100vw;
+      border-style: solid;
+      border-color: transparent transparent $bg-empresa transparent;
+  }
 
-          @keyframes tipado {
-            from {width: 0 }
-          }
+& .sesgoarriba {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 35vh 100vw 0 0;
+    border-style: solid;
+    border-color: $bg-empresa transparent transparent transparent;
+}
 
-          @keyframes blink {
-            50% {border-color: transparent}
-          }
-        }
-      }
+       // ---- Main Empresa -----
+
+& .contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+
+  & .sobre-nosotros {
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  & .slogan {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  & .parrafo {
+    margin-bottom: 13px;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 24px;
+    color: rgb(24, 16, 16);
+  }
+}
+
+  // ---- Galeria Empresa ----
+
+.galeria {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+
+  & .imagenes {
+    width: 20%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  & .encima {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 73, 94, 0.815);
+
+    & h2 {
+      position: relative;
+      top: 45%;
+      text-align: center;
+      color: #fff;
     }
 
-    @media screen and ( max-width: 590px) {
-      
-      .content-empresa{
-        width: 95vw;
-      }
-      .content-empresa > h1{
-        font-size: 30px;
-      }
+      & div {
+      position: relative;
+      display: block;
+      top: 46%;
+      width: 40px;
+      height: 5px;
+      background: #fff;
+      margin: auto;
+    }
+  }
+}
 
-      .content-empresa >p{
-        font-size: 20px;
-        line-height: 30px;
-        padding: 1rem;
-        color: #285AEB;
-      }       
+  // ---- Miembros Empresa ----
+
+.cards {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  & .card {
+    margin: 20px 0;
+    width: 30%;
+    height: 250px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 0px 4px 0 rgba(52, 73, 94, 0.849);
+
+    & img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+}
+
+  // ---- Clientes Empresa ----
+
+.fondo {
+  height: 900px;
+  position: relative;
+  background-image: url(/Imagenes/Empresa/fondo.jpg);
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  padding-top: 130px;
+
+  & .titulo-patrocinadores,
+    .subtitulo-patrocinadores {
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .7);
+  }
+
+  & .titulo-patrocinadores {
+    font-size: 56px;
+    margin-top: 48px;
+  }
+
+  & .subtitulo-patrocinadores {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 64px;
+  }
+
+  & .clientes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 54px;
+    width: 100%;
+    justify-content: space-between;
+  
+    & .cliente {
+      width: 30%;
+    }
+  
+    & .cliente img {
+      width: 100%;
     }
   }
 
-  
-  // -------------------
+  & .sesgoabajo-unico {
+    z-index: 10;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    border-width: 0 0 35vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #2c3e50 transparent;
+  }
+}
 
 
- /* ------- INGRESAR ------ */
+// ---- Footer Empresa ----
+
+.footer-empresa {
+  background: #2c3e50;
+  width: 100%;
+  height: auto;
+}
+
+
+// ---- Responsive Empresa ----
+
+@media screen and (max-width:900px) {
+  .card {
+      width: 48%;
+  }
+}
+
+@media screen and (max-width:610px) {
+  .header-empresa .textos {
+      margin-top: -530px;
+
+      & .titulo {
+        font-size: 75px;
+    }
+  }
+
+  .none {
+      display: none
+  }
+
+  .imagenes {
+      flex-grow: 1;
+  }
+
+  .card {
+      width: 90%;
+  }
+
+  .fondo {
+      height: auto;
+  }
+
+  .especial {
+      display: none;
+  }
+
+  .cliente {
+      width: 90%;
+      height: 200px;
+      margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width:380px) {
+  .header-empresa .textos {
+      margin-top: -500px;
+  }
+
+  .titulo {
+    font-size: 45px !important;
+  }
+
+  .subtitulo {
+    font-size: 20px !important;
+    margin-bottom: 32px;
+  }
+
+  .sobre-nosotros {
+      font-size: 36px;
+  }
+
+  & .titulo-patrocinadores {
+      font-size: 46px;
+  }
+
+  & .subtitulo-patrocinadores {
+      font-size: 20px;
+  }
+
+  & .cliente{
+    margin-bottom: 0;
+  }
+ }
+}
+
+     // ---------Final Empresa -------------
+
+
+    // ---- HTML Ingresar ----
 
 .content-ingresar {
   background-image: url(/Imagenes/Back/back-cuenta.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  display: flex;
   align-items: center;
-  padding-top: 150px;
   padding-bottom: 40px;
+
+  & .init{
+    font-weight: 500;
+  }
   
   & .form-signin {
     width: 100%;
@@ -195,16 +437,23 @@
     & .checkbox {
       font-weight: 400;
     }
+
+    & .button_ingresar{
+      justify-content: center;
+    }
   }  
 }
 
 .footer__ingresar{
-  background: $dark-opacity;
+  margin-top: 18rem;
+  color: $dark;
 }
 
+    // ------ Final Ingresar -----
 
 
- /* ---- CONTACTO ---- */
+
+    // ---- HTML Contacto ----
 
 
 .container-contacto {
@@ -228,7 +477,7 @@
     background: #222222;
     opacity: .9;
   
-    & h3{
+    & .contactanos{
       color: var(--bs-light);
     } 
   }
@@ -240,7 +489,6 @@
 
 }
 
-
 .contact-wrapper {
   box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
 }
@@ -248,7 +496,6 @@
 .contact-wrapper > * {
   padding: 1em;
 }
-
 
 .contact-form{
   & form {
@@ -300,7 +547,7 @@
 
 
 
-/* CONTACT INFO */
+// ---- Contac info ----
 
 
 .contact-info {
@@ -312,11 +559,6 @@
     text-align: center;
     margin: 0 0 1rem 0;
     color: #3b5998;
-
-  }
-
-  & .map{
-    width: 97%;
   }
 }
 
@@ -342,7 +584,7 @@
   }
 }
 
-    /* -- ICONOS REDES SOCIALES */
+    // ---- Iconos de redes sociales ----
 
 .redes{
   display: flex;
@@ -377,13 +619,17 @@
   }
 }
 
+    // ------- Final contacto -----
 
-/* ---- GALERIA ---- */
+    // ---- HTML Galeria ----
+.container-galeria{
+  background-image: radial-gradient(circle at 45.98% 72.79%, #e7e7e5 0, #c6c9d1 50%, #a5acbd 100%);
 
-.card{
-  overflow: hidden;
-  font-size: 1.125rem;
-  text-anchor: middle;
+  & .card{
+    overflow: hidden;
+    font-size: 1.125rem;
+    text-anchor: middle;
+    border-radius: .5rem;
  
   & .bd-placeholder-img {
     background-size: cover;
@@ -396,18 +642,40 @@
     }
   }
 
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .content-galeria{
+      padding-top: 40px;
     }
   }
 }
 
-@media (max-width: 991px) {
-  .content-galeria{
-    padding-top: 40px;
-  }
-}
+    // ---- html Terminos ----
+
+ .terminos-container{
+  background-image: radial-gradient(circle at 45.98% 72.79%, #faffff 0, #d8e1f7 50%, #b6c4e3 100%);
+
+  & .terminos{
+    max-width: 90%;
+    margin: auto;
+
+      & span{
+        font-size: 30px;
+      }
+
+      & p{
+        padding: 2rem;
+      }
+    }
+ }
+  
+    // ---- Final Términos ----
 
 
 
