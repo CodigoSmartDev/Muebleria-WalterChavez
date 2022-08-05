@@ -2,7 +2,7 @@
 # Coder-<h1 align="center">Hola 👋, soy Walter</h1>
 <h3 align="center">Un apasionado desarrollador frontend de Argentina</h3>
 
-- 🔭 Actualmente estoy trabajando en **Desafio Coder* *
+- 🔭 Actualmente estoy estudiando en **Coder House**
 
 <h3 align="left">Conéctate conmigo:</h3>
 <p align="left">
