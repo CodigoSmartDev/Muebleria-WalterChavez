@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,15 +36,16 @@
     
         <title>Creative Muebles</title>
     </head>
-    <body class="container-productos">
+    <body class="container-productos text-muted text-center">
        
-      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-white">
         <div class="mb-auto">
           <div>
             <h3 class="float-md-start mb-0">Creative</h3>
             <nav class="nav nav-masthead justify-content-center float-md-end">
               <a class="nav-link" href="/index.html">Home</a>
               <a class="nav-link" href="/Paginas/empresa.html">Empresa</a>
+              <a class="nav-link active" aria-current="page" href="/Paginas/productos.html">Productos</a>
               <a class="nav-link" href="/Paginas/contacto.html">Contacto</a>
               <a class="nav-link" href="/Paginas/ingresar.html">Cuenta</a>
             </nav>
@@ -52,53 +53,40 @@
         </div> 
       </div>
         
-        <main class="main.productos">
-            <div class="encabezado-productos">
-                <div class="h1">
+        <main class="main__productos">
+            <div class="encabezado__productos">
+                <div class="text__productos py-5">
                     <h1>Productos</h1>
                     <p class="parrafo">Muebles y objetos decorativos. Tendencia y Deco<p>
                 </div>
             </div>
-                <section class="cont-prod">
+                <section class="content__productos">
                     
-                    <div class="living-cont">
+                    <div class="living__contenedor contenedor">
                         <a href="/Productos-Galeria/living.html">
-                            <h2 class="titulo-galeria">Living</h2>
-                            <div 
-                                class="portada" 
-                                style="background-image: url('#');">
-                            </div>
+                            <h2 class="titulo-galeria">living</h2>
                         </a>
                     </div>
-                    <div class="iluminacion-cont">
-                        <a href="../Paginas/Productos/iluminaciom.html">
-                            <h3 class="titulo-galeria">Iluminacion</h3>
-                            <div 
-                                class="portada" 
-                                style="background-image: url('../Imagenes/Portadas/Portada.iluminacion.webp');">
-                            </div>
+
+                    <div class="cocina__contenedor contenedor">
+                        <a href="/Productos-Galeria/cocina.html">
+                            <h2 class="titulo-galeria">cocina</h2>
                         </a>
                     </div>
-                    <div class="deco-cont">
-                        <a href="../Paginas/Productos/deco.html">
-                            <h4 class="titulo-galeria">Deco</h4>
-                            <div 
-                                class="portada" 
-                                style="background-image: url('../Imagenes/Portadas/Portada.Decoracion.webp');">
-                            </div> 
+
+                    <div class="comedor__contenedor contenedor">
+                        <a href="/Productos-Galeria/comedor.html">
+                            <h2 class="titulo-galeria">comedor</h2> 
                         </a>      
                     </div>
-                <div class="comedor-cont">
-                    <a href="../Paginas/Productos/comedor.html">
-                        <h5 class="titulo-galeria">Comedor</h5>
-                        <div 
-                            class="portada" 
-                            style="background-image: url('../Imagenes/Portadas/Portada.Comedor.webp');">
-                        </div> 
-                    </a>  
-                </div>
-            </section>
-        </main>
+
+                    <div class="habitacion__contenedor contenedor">
+                        <a href="/Productos-Galeria/habitacion.html">
+                            <h2 class="titulo-galeria">habitacion</h2>
+                        </a>  
+                    </div>
+                </section>
+            </main>
     
         <footer class="container-fluid my-5 pt-5 text-muted text-center text-small">
             <p class="mb-1">&copy; 2017–2022 Creative</p>
@@ -111,5 +99,6 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
+
     </body>
 </html>
